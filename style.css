@@ -1,0 +1,256 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: linear-gradient(to left, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+p{
+    margin: 0;
+}
+
+header{
+    border: 2px solid hsl(217, 16%, 45%);
+    box-sizing: border-box;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2em auto;
+    padding: .5em 1em;
+    border-radius: 7px;
+    max-width: 400px;
+}
+
+.score-container{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    width: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: .3em;
+}
+
+.score-container .score-text{
+    color: hsl(229, 64%, 46%);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.score-container .computer-score-js,
+.score-container .player-score-js{
+    color: hsl(229, 25%, 31%);
+}
+
+.middle-text{
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 1.5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.player-score-js,
+.computer-score-js{
+    font-size: 2.2rem;
+}
+
+main{
+    width: 90%;
+    margin-inline: auto;
+    height: 320px;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+main .images{
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+main .paper{
+    border: 15px solid hsl(230, 95%, 61%);
+    z-index: 100;
+    transition: border-color .30s;
+}
+
+.paper:hover{
+    border-color: hsl(230, 100%, 71%);
+}
+
+main .scissors{
+    border: 15px solid hsl(40, 84%, 53%);
+    z-index: 100;
+    transition: border-color .30s;
+}
+
+.scissors:hover{
+    border-color: hsl(40, 92%, 67%);;
+}
+
+main .rock{
+    border: 15px solid hsl(349, 70%, 56%);
+    transition: border-color .30s;
+}
+
+.rock:hover{
+    border-color: hsl(349, 100%, 71%);
+}
+
+.upper-move-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.upper-move-container .line{
+    position: absolute;
+    border: 5px solid rgb(21, 37, 62);
+    width: 100px;
+    z-index: 0;
+    
+}
+
+.lower-move-container{
+    display: flex;
+    justify-content: center;
+}
+
+.result{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.comparison-move{
+    width: 90%;
+    max-width: 300px;
+    color: white;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.comparison-move img {
+    background-color: white;
+    padding: .5em;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.my-move{
+    margin-left: 2em;
+}
+
+dialog{
+    padding: 1.3em 2em;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+    max-width: 400px;
+    background: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+dialog::backdrop{
+    background: black;
+    opacity: .4;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    margin-bottom: .5em;
+    letter-spacing: 1px;
+}
+
+.button-flex{
+    display: flex;
+    justify-content: end;
+}
+
+.play-again-button:hover,
+.rules-icon:hover,
+.close:hover{
+    background-color: white;
+    color: hsl(228, 44%, 29%);
+}
+
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+}
+
+.rules-icon,
+.play-again-button,
+.close{
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: .6em 2em;
+    font-size: .8rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-right: 1em;
+    transition: background-color .30s;
+    cursor: pointer;
+}
+
+.rules p{
+    margin-bottom: .8rem;
+    letter-spacing: 1px;
+}
+
+.rules h3{
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 769px){
+    header{
+        max-width: 650px;
+        margin-bottom: 1em;
+    }
+
+    main img{
+        width: 70px;
+        height: 70px;
+    }
+
+    main .rock,
+    main .paper,
+    main .scissors{
+        border-width: 20px;
+    }
+
+    main{
+        max-width: 400px;
+        height: 350px;
+    }
+
+    .comparison-move{
+        margin: .5em auto;
+    }
+}

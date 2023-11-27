@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors | kurtDev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/wuts.jpg">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="score-container">
+            <div><p class="score-text">YOU</p></div>
+            <div><p class="player-score-js"></p></div>
+        </div>
+
+        <div class="middle-text">
+            <p>ROCK PAPER SCISSORS</p>
+        </div>
+        
+        <div class="score-container">
+            <div><p class="score-text">COMPUTER</p></div>
+            <div><p class="computer-score-js"></p></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="upper-move-container">
+            <img onclick="game('paper')" class="paper images" src="./images/icon-paper.svg" alt="">
+            <img onclick="game('scissors')" class="scissors images" src="./images/icon-scissors.svg" alt="">
+        </div>
+
+        <div class="lower-move-container">
+            <img onclick="game('rock')" class="rock images" src="./images/icon-rock.svg" alt="rock">
+        </div>
+        
+    </main>
+
+    <p class="result"></p>
+    
+    <div class="comparison-move">
+        <p class="my-move"></p>
+        <p class="comp-move"></p>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <dialog class="modal">
+        <h1 class="decision"></h1>
+        <div class="button-flex">
+            <button class="play-again-button">PLAY AGAIN</button>
+        </div>
+    </dialog>
+    
+    <footer>
+        <button onclick="rules()" class="rules-icon">RULES</button>
+
+        <dialog class="rules">
+            <h1>RULES OF THE GAME</h1>
+            <p>1. Rock beats Scissors, Scissors beats Paper and Paper beats Rock.</p>
+            <p>2. When you and the computer are tied, both of you cannot add points.</p>
+            <p>3. Whoever gets FIVE points first will be declared as a winner.</p>
+            <h3>GOOD LUCK AND HAVE FUN!!!</h3>
+            <div class="button-flex">
+                <button class="close">OK</button>
+            </div>
+
+        </dialog>
+    </footer>
+</body>
+</html>
